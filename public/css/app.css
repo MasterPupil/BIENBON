@@ -113,8 +113,9 @@
   min-height: 100vh;
 }
 .about .about-text h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
+  font-weight: bold;
 }
 .about .about-text p {
   margin-bottom: 1.5rem;
@@ -122,7 +123,7 @@
 .about .about-text ul li {
   display: flex;
   align-items: start;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .about .about-text ul li i {
   color: #ffc107;
