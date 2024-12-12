@@ -52,6 +52,15 @@
   color: #000;
 }
 
+.modal-content {
+  background-color: transparent;
+  border: none;
+}
+
+.modal-body {
+  padding: 0;
+}
+
 .play-button {
   z-index: 3;
   width: 70px;
