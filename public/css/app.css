@@ -1,3 +1,97 @@
+/* Navbar Styles */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.navbar .nav-link {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+.navbar .nav-link:hover, .navbar .nav-link.active {
+  color: #ffc107;
+}
+.navbar .btn {
+  border: 2px solid #ffc107;
+  color: #ffc107;
+}
+.navbar .btn:hover {
+  background-color: #ffc107;
+  color: #000;
+}
 
+/* Header Styles */
+.header {
+  position: relative;
+  height: 100vh;
+  background: url("../img/hero-bg.jpg") no-repeat center center/cover;
+  color: white;
+}
+.header .container {
+  z-index: 2;
+  position: relative;
+}
+.header h1 span {
+  color: #ffc107;
+  font-weight: bold;
+}
+.header .btn-outline-light {
+  border: 2px solid #ffc107;
+  color: #ffc107;
+}
+.header .btn-outline-light:hover {
+  background-color: #ffc107;
+  color: #000;
+}
+.header .btn-warning {
+  border: 2px solid #ffc107;
+  color: #ffffff;
+}
+.header .btn-warning:hover {
+  background-color: #ffc107;
+  color: #000;
+}
+.header .play-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .play-button i {
+  font-size: 2.5rem;
+  color: #ffc107;
+}
+.header .play-button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.button-common, .header .btn-outline-light,
+.header .btn-warning, .navbar .btn {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid #ffc107;
+  color: #ffc107;
+  background-color: transparent;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  text-decoration: none;
+}
+.button-common:hover, .header .btn-outline-light:hover,
+.header .btn-warning:hover, .navbar .btn:hover {
+  background-color: #ffc107;
+  color: #000;
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=app.css.map */
