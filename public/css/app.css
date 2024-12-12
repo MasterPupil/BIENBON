@@ -211,4 +211,53 @@
   }
 }
 
+#event-carousel {
+  background-color: #000;
+  padding: 40px 0;
+}
+#event-carousel .section-header p {
+  font-size: 1rem;
+  color: #fff;
+}
+#event-carousel .section-header h2 {
+  font-size: 2rem;
+  color: #ffc107;
+}
+#event-carousel .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin: 5px;
+}
+#event-carousel .carousel-indicators button.active {
+  background-color: #ffc107;
+}
+#event-carousel .carousel-item .row {
+  align-items: center;
+  margin: 0 auto;
+}
+#event-carousel .carousel-item img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+#event-carousel .carousel-item h3 {
+  font-size: 1.5rem;
+  color: #ffc107;
+}
+#event-carousel .carousel-item h4 {
+  font-size: 1.2rem;
+  color: #ffc107;
+}
+#event-carousel .carousel-item p, #event-carousel .carousel-item ul {
+  color: #fff;
+  font-size: 0.9rem;
+}
+#event-carousel .carousel-item ul {
+  padding-left: 20px;
+}
+#event-carousel .carousel-item ul li {
+  margin-bottom: 10px;
+}
+
 /*# sourceMappingURL=app.css.map */

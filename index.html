@@ -249,10 +249,250 @@
       </div>
     </div>
   </section>
+  <section id="event-carousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Titre de la section -->
+    <div class="section-header text-start">
+      <p class="text-white ms-4">Events-------</p>
+      <h2 class="text-warning ms-4">Organize Your Events in Our Restaurant</h2>
+    </div>
   
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#event-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#event-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#event-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
   
-
+    <!-- Carousel Inner -->
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img src="public/img/event-private.jpg" class="d-block w-100 rounded" alt="Birthday Party">
+          </div>
+          <div class="col-md-6 text-white">
+            <h3 class="text-warning">Birthday Parties</h3>
+            <h4 class="text-warning">$189</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <ul>
+              <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li>Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
   
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img src="public/img/event-custom.jpg" class="d-block w-100 rounded" alt="Custom Party">
+          </div>
+          <div class="col-md-6 text-white">
+            <h3 class="text-warning">Custom Parties</h3>
+            <h4 class="text-warning">$99</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <ul>
+              <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li>Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img src="public/img/events-bg.jpg" class="d-block w-100 rounded" alt="Private Party">
+          </div>
+          <div class="col-md-6 text-white">
+            <h3 class="text-warning">Private Parties</h3>
+            <h4 class="text-warning">$290</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <ul>
+              <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li>Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#event-carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#event-carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </section>
+  <section id="book-table" class="py-5 bg-dark text-white">
+    <div class="container">
+      <div class="text-start mb-4">
+        <p class="text-warning">RESERVATION-------</p>
+        <h2 class="text-warning">Book a Table</h2>
+      </div>
+      <form>
+        <div class="row mb-3">
+          <div class="col-md-4 mb-3">
+            <input type="text" class="form-control" placeholder="Your Name" required />
+          </div>
+          <div class="col-md-4 mb-3">
+            <input type="email" class="form-control" placeholder="Your Email" required />
+          </div>
+          <div class="col-md-4 mb-3">
+            <input type="tel" class="form-control" placeholder="Your Phone" required />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-4 mb-3">
+            <input type="date" class="form-control" required />
+          </div>
+          <div class="col-md-4 mb-3">
+            <input type="time" class="form-control" required />
+          </div>
+          <div class="col-md-4 mb-3">
+            <input type="number" class="form-control" placeholder="# of People" required />
+          </div>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-warning">Book a Table</button>
+      </form>
+    </div>
+  </section>
+  
+  <section id="gallery" class="py-5 bg-dark text-white">
+    <div class="container">
+      <div class="text-start mb-4">
+        <p class="text-warning">GALLERY-------</p>
+        <h2 class="text-warning">Some Photos from Our Restaurant</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <img src="public/img/gallery/photo1.jpg" class="img-fluid rounded" alt="Gallery Photo 1">
+        </div>
+        <div class="col-md-3">
+          <img src="public/img/gallery/photo2.jpg" class="img-fluid rounded" alt="Gallery Photo 2">
+        </div>
+        <div class="col-md-3">
+          <img src="public/img/gallery/photo3.jpg" class="img-fluid rounded" alt="Gallery Photo 3">
+        </div>
+        <div class="col-md-3">
+          <img src="public/img/gallery/photo4.jpg" class="img-fluid rounded" alt="Gallery Photo 4">
+        </div>
+        <div class="col-md-3">
+          <img src="public/img/gallery/photo5.jpg" class="img-fluid rounded" alt="Gallery Photo 5">
+        </div>
+        <div class="col-md-3">
+          <img src="public/img/gallery/photo6.jpg" class="img-fluid rounded" alt="Gallery Photo 6">
+        </div>
+        <div class="col-md-3">
+          <img src="public/img/gallery/photo7.jpg" class="img-fluid rounded" alt="Gallery Photo 7">
+        </div>
+        <div class="col-md-3">
+          <img src="public/img/gallery/photo8.jpg" class="img-fluid rounded" alt="Gallery Photo 8">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="chefs" class="py-5 bg-dark text-white">
+    <div class="container">
+      <div class="text-start mb-4">
+        <p class="text-warning">CHEFS-------</p>
+        <h2 class="text-warning">Our Professional Chefs</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 text-center">
+          <img src="public/img/chefs/chef1.jpg" class="img-fluid rounded-circle mb-3" alt="Chef 1">
+          <h4 class="text-warning">Chef 1</h4>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="public/img/chefs/chef2.jpg" class="img-fluid rounded-circle mb-3" alt="Chef 2">
+          <h4 class="text-warning">Chef 2</h4>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="public/img/chefs/chef3.jpg" class="img-fluid rounded-circle mb-3" alt="Chef 3">
+          <h4 class="text-warning">Chef 3</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact-us" class="py-5 bg-dark text-white">
+    <div class="container">
+      <div class="text-start mb-4">
+        <p class="text-warning">CONTACT-------</p>
+        <h2 class="text-warning">Contact Us</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <iframe src="https://www.google.com/maps/embed" class="w-100 rounded" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your Name" required />
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Your Email" required />
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-warning">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="py-4 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5 class="text-warning">CBIENBON</h5>
+          <p>A108 Adam Street, NY 535022, USA</p>
+          <p>Phone: +1 5589 55488 55</p>
+          <p>Email: info@example.com</p>
+          <div class="d-flex gap-2">
+            <a href="#" class="text-warning">Facebook</a>
+            <a href="#" class="text-warning">Twitter</a>
+            <a href="#" class="text-warning">Instagram</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-warning">Useful Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Home</a></li>
+            <li><a href="#" class="text-white">About us</a></li>
+            <li><a href="#" class="text-white">Services</a></li>
+            <li><a href="#" class="text-white">Privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-warning">Our Newsletter</h5>
+          <p>Subscribe to stay updated</p>
+          <form>
+            <input type="email" class="form-control mb-2" placeholder="Email Address" required />
+            <button type="submit" class="btn btn-warning">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <p>&copy; 2024 CBIENBON. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
   
   <!-- Bootstrap JS -->
   <script>
