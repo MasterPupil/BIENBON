@@ -51,7 +51,9 @@
   background-color: #ffc107;
   color: #000;
 }
-.header .play-button {
+
+.play-button {
+  z-index: 3;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -64,12 +66,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
-.header .play-button i {
+.play-button i {
   font-size: 2.5rem;
   color: #ffc107;
 }
-.header .play-button:hover {
+.play-button:hover {
   background: rgba(255, 255, 255, 0.4);
 }
 
