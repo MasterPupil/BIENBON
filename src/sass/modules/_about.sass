@@ -1,0 +1,38 @@
+// About Section
+.about
+  background: url('../img/about-bg.jpg') no-repeat center center/cover
+  color: #fff
+  padding: 10rem 0 // toute la page
+  min-height: 100vh //hauteur minimale d'une page
+
+  .about-text
+    h2
+      font-size: 2.5rem
+      margin-bottom: 1rem
+    p
+      margin-bottom: 1.5rem
+    ul
+      li
+        display: flex
+        align-items: start
+        margin-bottom: 1rem
+        i
+          color: #ffc107
+          font-size: 1.5rem
+          margin-right: 1rem
+
+  .about-image
+    position: relative
+    img
+      transition: transform 0.3s ease-in-out
+    &:hover img
+      transform: scale(1.05)
+    .image-overlay
+      border: 4px solid #ffc107
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      pointer-events: none
+      border-radius: 0.5rem
