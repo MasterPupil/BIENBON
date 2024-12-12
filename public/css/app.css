@@ -106,94 +106,109 @@
   text-decoration: none;
 }
 
-.about {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.why-us {
   padding: 4rem 2rem;
-  background: url("../img/about-bg.jpg") no-repeat center center/cover;
-  color: white;
-  height: 100vh;
+  background-color: #000;
+  color: #fff;
 }
-.about .content {
-  max-width: 50%;
+.why-us h3 {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #fff;
 }
-.about .content h2 {
+.why-us h2 {
+  text-align: left;
+  margin-bottom: 2rem;
   font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 1rem;
-}
-.about .content p {
-  margin-bottom: 1.5rem;
-  line-height: 1.8;
-}
-.about .content .checklist {
-  list-style: none;
-  padding: 0;
-}
-.about .content .checklist li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-.about .content .checklist li i {
-  font-size: 1.5rem;
-  margin-right: 1rem;
   color: #ffc107;
 }
-.about .image-container {
-  position: relative;
-  width: 40%;
-  overflow: hidden;
-  border-radius: 1rem;
-  transition: transform 0.3s ease-in-out;
+.why-us .row {
+  display: flex;
+  justify-content: space-between;
 }
-.about .image-container:hover {
-  transform: scale(1.1);
+.why-us .card {
+  background-color: #222;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  flex: 1;
+  margin: 0 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
-.about .image-container img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease-in-out;
-  border-radius: 1rem;
+.why-us .card .number, .why-us .card h4, .why-us .card p {
+  transition: color 0.3s ease;
 }
-.about .image-container .decorative-angles {
-  position: absolute;
-  pointer-events: none;
+.why-us .card .number {
+  color: #ffc107;
 }
-.about .image-container .decorative-angles::before, .about .image-container .decorative-angles::after {
-  content: "";
-  position: absolute;
+.why-us .card:hover {
   background-color: #ffc107;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
-.about .image-container .decorative-angles::before {
-  width: 3rem;
-  height: 0.2rem;
-  top: 0;
-  left: 0;
+.why-us .card:hover .number, .why-us .card:hover h4, .why-us .card:hover p {
+  color: #000;
+  font-weight: bold;
 }
-.about .image-container .decorative-angles::after {
-  width: 0.2rem;
-  height: 3rem;
-  bottom: 0;
-  right: 0;
+
+.menu-section {
+  text-align: center;
+  width: 100%;
+  background-color: #1a1814;
+  padding: 50px 0;
 }
-.about-image-container {
-    position: relative;
-    display: inline-block; 
+.menu-section .nav .nav-link {
+  color: #fff;
+  font-weight: 500;
+}
+.menu-section .nav .nav-link:hover, .menu-section .nav .nav-link.active {
+  color: #ffc107;
+  font-weight: bold;
+  background-color: transparent;
+}
+.menu-section .tab-content .tab-pane {
+  display: none;
+}
+.menu-section .tab-content .tab-pane.active {
+  display: block;
+  animation: fade-in 0.5s ease-in-out;
+}
+.menu-section .card {
+  background-color: transparent;
+  border: none;
+}
+.menu-section .card .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffc107;
+}
+.menu-section .card .card-title .float-end {
+  color: #fff;
+  font-size: 1rem;
+}
+.menu-section .card .card-text {
+  color: #fff;
+  opacity: 0.7;
+}
+.menu-section .card img {
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.menu-section .card img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
-  
-  .about-image {
-    width: 100%;
-    height: auto;
-    transition: transform 0.5s ease-in-out;
+  to {
+    opacity: 1;
   }
-  
-  .about-image:hover {
-    transform: scale(1.1); /* Agrandissement de 10% */
-  }
-  
-  
+}
+
 /*# sourceMappingURL=app.css.map */

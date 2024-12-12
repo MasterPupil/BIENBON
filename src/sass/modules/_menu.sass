@@ -1,0 +1,53 @@
+.menu-section
+  text-align: center
+  width: 100%
+  background-color: #1a1814
+  padding: 50px 0
+
+  // Nav tabs
+  .nav
+    .nav-link
+      color: #fff
+      font-weight: 500
+      &:hover, &.active
+        color: #ffc107
+        font-weight: bold
+        background-color: transparent
+
+  // Tab content
+  .tab-content
+    .tab-pane
+      display: none
+      &.active
+        display: block
+        animation: fade-in 0.5s ease-in-out
+
+  // Cards
+  .card
+    background-color: transparent
+    border: none
+    .card-title
+      font-size: 1.25rem
+      font-weight: bold
+      color: #ffc107
+      .float-end
+        color: #fff
+        font-size: 1rem
+
+    .card-text
+      color: #fff
+      opacity: 0.7
+
+    img
+      border-radius: 50%
+      transition: transform 0.3s ease, box-shadow 0.3s ease
+      &:hover
+        transform: scale(1.1)
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5)
+
+  // Fade-in animation
+  @keyframes fade-in
+    from
+      opacity: 0
+    to
+      opacity: 1

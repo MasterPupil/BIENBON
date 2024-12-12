@@ -108,40 +108,151 @@
       </div>
     </div>
   </section>
-  <section class="why-us py-5 text-white" style="background-color: #111;">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h6 class="text-uppercase fw-bold text-warning">Why Us</h6>
-        <h2 class="fw-bold">Why Choose Our Restaurant</h2>
+  <section class="menu-section">
+    <!-- Section Title -->
+    <div class="text-start ms-4">
+      <p class="text-white">Menu-------</p>
+      <h1 class="text-warning">Check Our Tasty Menu</h1>
+    </div>
+  
+    <!-- Navigation Tabs -->
+    <ul class="nav nav-pills mb-3 gap-4 justify-content-center" id="menu-tabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="starters-tab" data-bs-toggle="pill" data-bs-target="#starters" type="button" role="tab" aria-controls="starters" aria-selected="false">Starters</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="salads-tab" data-bs-toggle="pill" data-bs-target="#salads" type="button" role="tab" aria-controls="salads" aria-selected="false">Salads</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="specialty-tab" data-bs-toggle="pill" data-bs-target="#specialty" type="button" role="tab" aria-controls="specialty" aria-selected="false">Specialty</button>
+      </li>
+    </ul>
+  
+    <!-- Tab Content -->
+    <div class="tab-content" id="menu-tabs-content">
+      <!-- All Items -->
+      <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+        <div class="row g-4 justify-content-center">
+          <!-- Example Menu Item -->
+          <div class="col-md-5">
+            <div class="card bg-transparent">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="./public/img/specials-1.png" class="img-fluid rounded-circle w-75 border border-5 border-secondary border-opacity-50" alt="Lobster Bisque">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body text-start">
+                    <h5 class="card-title text-warning">Lobster Bisque <span class="float-end text-white">$5.95</span></h5>
+                    <p class="card-text text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="card bg-transparent">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="./public/img/specials-1.png" class="img-fluid rounded-circle w-75 border border-5 border-secondary border-opacity-50" alt="Bread Barrel">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body text-start">
+                    <h5 class="card-title text-warning">Bread Barrel <span class="float-end text-white">$6.95</span></h5>
+                    <p class="card-text text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="card bg-transparent">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="./public/img/specials-1.png" class="img-fluid rounded-circle w-75 border border-5 border-secondary border-opacity-50" alt="Greek Salad">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body text-start">
+                    <h5 class="card-title text-warning">Greek Salad <span class="float-end text-white">$9.95</span></h5>
+                    <p class="card-text text-white-50">Fresh spinach, tomatoes, and Greek olives.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="row g-4">
-        <!-- Card 1 -->
-        <div class="col-md-4">
-          <div class="card card-hover text-center p-4">
-            <h4 class="text-warning">01</h4>
-            <h5 class="fw-bold">Lorem Ipsum</h5>
-            <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat.</p>
+  
+      <!-- Starters -->
+      <div class="tab-pane fade" id="starters" role="tabpanel" aria-labelledby="starters-tab">
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-5">
+            <div class="card bg-transparent">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="./public/img/specials-1.png" class="img-fluid rounded-circle w-75 border border-5 border-secondary border-opacity-50" alt="Lobster Bisque">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body text-start">
+                    <h5 class="card-title text-warning">Lobster Bisque <span class="float-end text-white">$5.95</span></h5>
+                    <p class="card-text text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- Card 2 -->
-        <div class="col-md-4">
-          <div class="card card-hover text-center p-4">
-            <h4 class="text-warning">02</h4>
-            <h5 class="fw-bold">Repellat Nihil</h5>
-            <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest.</p>
+      </div>
+  
+      <!-- Salads -->
+      <div class="tab-pane fade" id="salads" role="tabpanel" aria-labelledby="salads-tab">
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-5">
+            <div class="card bg-transparent">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="./public/img/specials-1.png" class="img-fluid rounded-circle w-75 border border-5 border-secondary border-opacity-50" alt="Greek Salad">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body text-start">
+                    <h5 class="card-title text-warning">Greek Salad <span class="float-end text-white">$9.95</span></h5>
+                    <p class="card-text text-white-50">Fresh spinach, tomatoes, and Greek olives.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- Card 3 -->
-        <div class="col-md-4">
-          <div class="card card-hover text-center p-4">
-            <h4 class="text-warning">03</h4>
-            <h5 class="fw-bold">Ad ad velit qui</h5>
-            <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis.</p>
+      </div>
+  
+      <!-- Specialty -->
+      <div class="tab-pane fade" id="specialty" role="tabpanel" aria-labelledby="specialty-tab">
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-5">
+            <div class="card bg-transparent">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="./public/img/specials-1.png" class="img-fluid rounded-circle w-75 border border-5 border-secondary border-opacity-50" alt="Specialty Dish">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body text-start">
+                    <h5 class="card-title text-warning">Specialty Dish <span class="float-end text-white">$12.95</span></h5>
+                    <p class="card-text text-white-50">A unique blend of flavors and spices.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+  
+  
+
+  
   
   <!-- Bootstrap JS -->
   <script>

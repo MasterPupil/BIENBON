@@ -1,0 +1,46 @@
+.why-us
+  padding: 4rem 2rem
+  background-color: #000
+  color: #fff
+
+  h3
+    text-align: left
+    margin-bottom: 0.5rem
+    font-size: 1.5rem
+    color: #fff // Blanc
+
+  h2
+    text-align: left
+    margin-bottom: 2rem
+    font-size: 2.5rem
+    font-weight: bold
+    color: #ffc107 // Jaune
+
+  .row
+    display: flex
+    justify-content: space-between
+
+  .card
+    background-color: #222
+    color: #ffffff
+    border: none
+    border-radius: 8px
+    flex: 1
+    margin: 0 1rem
+    padding: 2rem
+    text-align: center
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease
+
+    .number, h4, p
+      transition: color 0.3s ease
+    .number
+        color: #ffc107
+
+    &:hover
+      background-color: #ffc107 // Jaune
+      transform: translateY(-10px)
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5)
+
+      .number, h4, p
+        color: #000 // Noir
+        font-weight: bold
