@@ -1,27 +1,91 @@
-// Common Button Styles
-.button-common
-  font-size: 1rem
-  font-weight: bold
-  text-transform: uppercase
-  border: 2px solid #ffc107
-  color: #ffc107
-  background-color: transparent
-  padding: 0.5rem 1.5rem
-  border-radius: 2rem
-  transition: all 0.3s ease-in-out
-  display: inline-block
-  text-decoration: none
-  
+/* Section Why Us */
+.why-us-section
+  background-color: #000000
+  padding: 80px 0
+  color: #ffffff
 
-  &:hover
-    background-color: #ffc107
-    color: #000
-    text-decoration: none
-// Navbar
-.navbar .btn
-  @extend .button-common
+  .section-title
+    margin-bottom: 3rem
+    text-align: left
+    gap: 1rem
 
-// Header
-.header .btn-outline-light, 
-.header .btn-warning
-  @extend .button-common
+    .subtitle
+      display: flex
+      align-items: center // pour centrer verticalement
+      gap: 0.5rem // Espacement entre le texte et le trait
+
+      &::after
+        content: ''
+        display: inline-block
+        width: 120px // Ajuste la longueur pour ressembler à un tiret
+        height: 1px 
+        background: #cda45e
+        flex-shrink: 0 // empecher 
+        transform: translateY(0) // Retire toute possibilité inclinaison vertical
+
+
+    .main-title
+      font-size: 2.5rem
+      color: #cda45e
+      font-family: serif
+      font-weight: bold
+
+  .cards-container
+    display: flex
+    justify-content: space-between
+    gap: 30px
+
+    .card
+      background-color: #1a1814
+      padding: 2rem
+      border-radius: 0px
+      text-align: left
+      transition: background-color 0.3s ease-in-out, transform 0.3s ease
+      flex: 1
+      position: relative
+
+      &:hover
+        background-color: #cda45e
+        transform: scale(1.03)
+
+        .number
+          color: #ffffff
+
+      .number
+        font-size: 1.8rem
+        color: #cda45e
+        font-weight: bold
+        transition: color 0.3s ease
+
+      .card-title
+        font-size: 1.3rem
+        color: #ffffff
+        margin: 1rem 0
+        font-weight: bold
+
+      .card-text
+        font-size: 1rem
+        color: #e6e6e6
+        line-height: 1.6
+
+/* Responsive */
+@media (max-width: 1024px) // Tablette
+  .cards-container
+    flex-wrap: wrap
+
+    .card
+      flex: 0 0 calc(50% - 15px) // Deux col calmement 
+      margin-bottom: 2rem
+
+@media (max-width: 768px) // Mobile L
+  .section-title
+    .main-title
+      font-size: 2rem
+
+  .cards-container
+    flex-direction: column
+    gap: 20px
+
+    .card
+      flex: 1
+      text-align: center

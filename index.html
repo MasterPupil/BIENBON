@@ -7,17 +7,33 @@
   <link rel="stylesheet" href="./public/css/app.css">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
 </head>
 <body>
-    <!-- Navbar en Bien -->
+  <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">CBIENBON</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold" href="#">CBIENBON</a>
+        <!-- Toggler pour tablette et mobile -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+        <!-- Menu de navigation -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav text-center">
             <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
@@ -26,469 +42,323 @@
             <li class="nav-item"><a class="nav-link" href="#">Chefs</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
           </ul>
-          <a href="#" class="btn btn-outline-light ms-3">BOOK A TABLE</a>
         </div>
+        <!-- Bouton BOOK A TABLE -->
+        <a href="#" class="btn btn-outline-light book-table-btn ms-3">BOOK A TABLE</a>
       </div>
     </nav>
-  <!-- Section HEADER OUI -->
-  <header class="header d-flex align-items-center">
-    <div class="container text-white text-center text-lg-start">
-      <h1 class="display-4 fw-bold">
-        Welcome to <span>CBIENBON</span>
-      </h1>
-      <p class="lead">Delivering great food for more than 18 years!</p>
-      <div class="d-flex gap-3">
-        <a href="#" class="btn btn-outline-light btn-lg">OUR MENU</a>
-        <a href="#" class="btn btn-warning btn-lg">BOOK A TABLE</a>
+    <!-- Section Header -->
+    <header class="header d-flex align-items-center">
+      <!-- Contenu du header -->
+      <div class="container text-white text-center text-lg-start">
+        <h1 class="display-4 fw-bold">Welcome to <span>CBIENBON</span></h1>
+        <p class="lead">Delivering great food for more than 18 years!</p>
+        <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+          <!-- Boutons -->
+          <a href="#" class="btn hero-btn btn-outline-light">OUR MENU</a>
+          <a href="#" class="btn hero-btn btn-outline-light">BOOK A TABLE</a>
+        </div>
       </div>
-    </div>
-    <a href="#" class="play-button position-absolute" data-bs-toggle="modal" data-bs-target="#videoModal">
-        <i class="bi bi-play-circle-fill"></i>
+      <!-- Bouton Play animé -->
+      <a href="#" id="play-video" class="video-play-button position-absolute" data-bs-toggle="modal" data-bs-target="#videoModal">
+        <span></span>
       </a>
     </header>
-      <!-- Modal for Video -->
-  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-transparent border-0">
-        <div class="modal-body p-0">
-          <div class="ratio ratio-16x9">
-            <iframe
-              src="https://www.youtube.com/watch?v=oHg5SJYRHA0&ab_channel=cotter548"
-              title="YouTube video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+  
+    <!-- Modal pour la vidéo -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-body p-0">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/oHg5SJYRHA0?autoplay=1"
+                title="YouTube video"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <section class="about-section">
+      <div class="about-container container">
+        <!-- Colonne Texte -->
+        <div class="about-text">
+          <h2 class="about-title">
+            Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.
+          </h2>
+          <p class="about-subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <ul class="about-list">
+            <li>
+              <i class="bi bi-check-circle"></i>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </li>
+            <li>
+              <i class="bi bi-check-circle"></i>
+              Duis aute irure dolor in reprehenderit in voluptate velit.
+            </li>
+            <li>
+              <i class="bi bi-check-circle"></i>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </li>
+          </ul>
+          <p class="about-paragraph">
+            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Exceptuer sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <!-- Colonne Image -->
+        <div class="about-image-container">
+          <div class="about-image">
+            <img src="./public/img/about.jpg" alt="Restaurant Interior">
+            <div class="corner top-left"></div>
+            <div class="corner bottom-right"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="why-us-section">
+      <div class="container">
+        <!-- Titre principal -->
+        <div class="section-title">
+          <h5 class="subtitle">WHY US</h5>
+          <h2 class="main-title">Why Choose Our Restaurant</h2>
+        </div>
+    
+        <!-- Contenu des cartes -->
+        <div class="cards-container">
+          <!-- Carte 1 -->
+          <div class="card">
+            <span class="number">01</span>
+            <h3 class="card-title">Lorem Ipsum</h3>
+            <p class="card-text">
+              Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat.
+            </p>
+          </div>
+          <!-- Carte 2 -->
+          <div class="card">
+            <span class="number">02</span>
+            <h3 class="card-title">Repellat Nihil</h3>
+            <p class="card-text">
+              Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest.
+            </p>
+          </div>
+          <!-- Carte 3 -->
+          <div class="card">
+            <span class="number">03</span>
+            <h3 class="card-title">Ad ad velit qui</h3>
+            <p class="card-text">
+              Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Section Menu -->
+<section id="menu" class="menu">
+  <div class="container">
+    <!-- Section Title -->
+    <div class="section-title">
+      <h2>Menu</h2>
+      <p>Check Our Tasty Menu</p>
+    </div>
+
+    <!-- Filters -->
+    <ul class="menu-filters">
+      <li class="filter-active" data-filter="all">All</li>
+      <li data-filter="starters">Starters</li>
+      <li data-filter="salads">Salads</li>
+      <li data-filter="specialty">Specialty</li>
+    </ul>
+
+    <!-- Menu Items -->
+    <div class="menu-items">
+      <!-- Starters -->
+      <div class="menu-item starters" data-category="starters">
+        <img src="./public/img/lobster-bisque.jpg" alt="Lobster Bisque" class="menu-img">
+        <div class="menu-details">
+          <div class="menu-content">
+            <span class="menu-title">Lobster Bisque</span>
+            <span class="menu-dots"></span>
+            <span class="menu-price">$5.95</span>
+          </div>
+          <p class="menu-description">Lorem, deren, trataro, filede, nerada</p>
+        </div>
+      </div>
+
+      <div class="menu-item starters" data-category="starters">
+        <img src="./public/img/cake.jpg" alt="Crab Cake" class="menu-img">
+        <div class="menu-details">
+          <div class="menu-content">
+            <span class="menu-title">Crab Cake</span>
+            <span class="menu-dots"></span>
+            <span class="menu-price">$7.95</span>
+          </div>
+          <p class="menu-description">A delicate crab cake served on a toasted roll with lettuce and tartar sauce</p>
+        </div>
+      </div>
+
+      <div class="menu-item starters" data-category="starters">
+        <img src="./public/img/mozzarella.jpg" alt="Mozzarella Stick" class="menu-img">
+        <div class="menu-details">
+          <div class="menu-content">
+            <span class="menu-title">Mozzarella Stick</span>
+            <span class="menu-dots"></span>
+            <span class="menu-price">$4.95</span>
+          </div>
+          <p class="menu-description">Lorem, deren, trataro, filede, nerada</p>
+        </div>
+      </div>
+
+      <!-- Salads -->
+      <div class="menu-item salads" data-category="salads">
+        <img src="./public/img/caesar.jpg" alt="Caesar Selections" class="menu-img">
+        <div class="menu-details">
+          <div class="menu-content">
+            <span class="menu-title">Caesar Selections</span>
+            <span class="menu-dots"></span>
+            <span class="menu-price">$8.95</span>
+          </div>
+          <p class="menu-description">Lorem, deren, trataro, filede, nerada</p>
+        </div>
+      </div>
+
+      <div class="menu-item salads" data-category="salads">
+        <img src="./public/img/greek-salad.jpg" alt="Greek Salad" class="menu-img">
+        <div class="menu-details">
+          <div class="menu-content">
+            <span class="menu-title">Greek Salad</span>
+            <span class="menu-dots"></span>
+            <span class="menu-price">$9.95</span>
+          </div>
+          <p class="menu-description">Fresh spinach, crisp romaine, tomatoes, and Greek olives</p>
+        </div>
+      </div>
+
+      <div class="menu-item salads" data-category="salads">
+        <img src="./public/img/spinach-salad.jpg" alt="Spinach Salad" class="menu-img">
+        <div class="menu-details">
+          <div class="menu-content">
+            <span class="menu-title">Spinach Salad</span>
+            <span class="menu-dots"></span>
+            <span class="menu-price">$9.95</span>
+          </div>
+          <p class="menu-description">Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette</p>
+        </div>
+      </div>
+
+      <!-- Specialty -->
+      <div class="menu-item specialty" data-category="specialty">
+        <img src="./public/img/bread-barrel.jpg" alt="Bread Barrel" class="menu-img">
+        <div class="menu-details">
+          <div class="menu-content">
+            <span class="menu-title">Bread Barrel</span>
+            <span class="menu-dots"></span>
+            <span class="menu-price">$6.95</span>
+          </div>
+          <p class="menu-description">Lorem, deren, trataro, filede, nerada</p>
+        </div>
+      </div>
+
+      <div class="menu-item specialty" data-category="specialty">
+        <img src="./public/img/tuscan-grilled.jpg" alt="Tuscan Grilled" class="menu-img">
+        <div class="menu-details">
+          <div class="menu-content">
+            <span class="menu-title">Tuscan Grilled</span>
+            <span class="menu-dots"></span>
+            <span class="menu-price">$9.95</span>
+          </div>
+          <p class="menu-description">Grilled chicken with provolone, artichoke hearts, and roasted red pesto</p>
+        </div>
+      </div>
+
+      <div class="menu-item specialty" data-category="specialty">
+        <img src="./public/img/lobster-roll.jpg" alt="Lobster Roll" class="menu-img">
+        <div class="menu-details">
+          <div class="menu-content">
+            <span class="menu-title">Lobster Roll</span>
+            <span class="menu-dots"></span>
+            <span class="menu-price">$12.95</span>
+          </div>
+          <p class="menu-description">Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll</p>
         </div>
       </div>
     </div>
   </div>
-  </header>
- <!-- About Section -->
- <section class="about-section" style="background-image: url('public/img/about-bg.jpg'); background-size: cover; background-position: center; padding: 100px 0;">
-    <div class="container text-white">
-      <div class="row align-items-center">
-        <!-- Text Content -->
-        <div class="col-md-6">
-          <h2 class="display-5 fw-bold">
-            Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.
-          </h2>
-          <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <ul class="list-unstyled">
-            <li class="d-flex align-items-start mb-3">
-              <i class="bi bi-check-circle-fill text-warning me-3"></i>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </li>
-            <li class="d-flex align-items-start mb-3">
-              <i class="bi bi-check-circle-fill text-warning me-3"></i>
-              Duis aute irure dolor in reprehenderit in voluptate velit.
-            </li>
-            <li class="d-flex align-items-start mb-3">
-              <i class="bi bi-check-circle-fill text-warning me-3"></i>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trident storacalaperda mastiro dolore eu fugiat nulla pariatur.
-            </li>
-          </ul>
-          <p>
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-        <!-- partie image -->
-        <div class="col-md-6">
-          <div class="about-image-container">
-            <img src="public/img/about.jpg" alt="About Image" class="about-image rounded">
-             <!-- Angles décoratifs -->
-          <div class="position-absolute top-0 start-0 bg-warning" style="width: 50px; height: 5px;"></div>
-          <div class="position-absolute top-0 start-0 bg-warning" style="width: 5px; height: 50px;"></div>
-          <div class="position-absolute bottom-0 end-0 bg-warning" style="width: 50px; height: 5px;"></div>
-          <div class="position-absolute bottom-0 end-0 bg-warning" style="width: 5px; height: 50px;"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="menu-section">
-    <!-- Section Title -->
-    <div class="text-start ms-4">
-      <p class="text-white">Menu-------</p>
-      <h1 class="text-warning">Check Our Tasty Menu</h1>
-    </div>
-  
-    <!--JSPlus -->
-    <ul class="nav nav-pills mb-3 gap-4 justify-content-center" id="menu-tabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="all-tab" data-bs-toggle="pill" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">All</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="starters-tab" data-bs-toggle="pill" data-bs-target="#starters" type="button" role="tab" aria-controls="starters" aria-selected="false">Starters</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="salads-tab" data-bs-toggle="pill" data-bs-target="#salads" type="button" role="tab" aria-controls="salads" aria-selected="false">Salads</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="specialty-tab" data-bs-toggle="pill" data-bs-target="#specialty" type="button" role="tab" aria-controls="specialty" aria-selected="false">Specialty</button>
-      </li>
-    </ul>
-  
-    <!-- c long-->
-    <div class="tab-content" id="menu-tabs-content">
-      <!-- All Items -->
-      <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
-        <div class="row g-4 justify-content-center">
-          <!-- exemple -->
-          <div class="col-md-5">
-            <div class="card bg-transparent">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="./public/img/specials-1.png" class="img-fluid rounded-circle w-75 border border-5 border-secondary border-opacity-50" alt="Lobster Bisque">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body text-start">
-                    <h5 class="card-title text-warning">Lobster Bisque <span class="float-end text-white">$5.95</span></h5>
-                    <p class="card-text text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-5">
-            <div class="card bg-transparent">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="./public/img/specials-1.png" class="img-fluid rounded-circle w-75 border border-5 border-secondary border-opacity-50" alt="Bread Barrel">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body text-start">
-                    <h5 class="card-title text-warning">Bread Barrel <span class="float-end text-white">$6.95</span></h5>
-                    <p class="card-text text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-5">
-            <div class="card bg-transparent">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="./public/img/specials-1.png" class="img-fluid rounded-circle w-75 border border-5 border-secondary border-opacity-50" alt="Greek Salad">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body text-start">
-                    <h5 class="card-title text-warning">Greek Salad <span class="float-end text-white">$9.95</span></h5>
-                    <p class="card-text text-white-50">Fresh spinach, tomatoes, and Greek olives.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <!-- STARTT -->
-      <div class="tab-pane fade" id="starters" role="tabpanel" aria-labelledby="starters-tab">
-        <div class="row g-4 justify-content-center">
-          <div class="col-md-5">
-            <div class="card bg-transparent">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="./public/img/specials-1.png" class="img-fluid rounded-circle w-75 border border-5 border-secondary border-opacity-50" alt="Lobster Bisque">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body text-start">
-                    <h5 class="card-title text-warning">Lobster Bisque <span class="float-end text-white">$5.95</span></h5>
-                    <p class="card-text text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Salads -->
-      <div class="tab-pane fade" id="salads" role="tabpanel" aria-labelledby="salads-tab">
-        <div class="row g-4 justify-content-center">
-          <div class="col-md-5">
-            <div class="card bg-transparent">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="./public/img/specials-1.png" class="img-fluid rounded-circle w-75 border border-5 border-secondary border-opacity-50" alt="Greek Salad">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body text-start">
-                    <h5 class="card-title text-warning">Greek Salad <span class="float-end text-white">$9.95</span></h5>
-                    <p class="card-text text-white-50">Fresh spinach, tomatoes, and Greek olives.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <!-- special -->
-      <div class="tab-pane fade" id="specialty" role="tabpanel" aria-labelledby="specialty-tab">
-        <div class="row g-4 justify-content-center">
-          <div class="col-md-5">
-            <div class="card bg-transparent">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="./public/img/specials-1.png" class="img-fluid rounded-circle w-75 border border-5 border-secondary border-opacity-50" alt="Specialty Dish">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body text-start">
-                    <h5 class="card-title text-warning">Specialty Dish <span class="float-end text-white">$12.95</span></h5>
-                    <p class="card-text text-white-50">A unique blend of flavors and spices.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="event-carousel" class="carousel slide" data-bs-ride="carousel">
-    <!-- Titre de la section -->
-    <div class="section-header text-start">
-      <p class="text-white ms-4">Events-------</p>
-      <h2 class="text-warning ms-4">Organize Your Events in Our Restaurant</h2>
-    </div>
-  
-    <!-- Carousel Indicators -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#event-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#event-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#event-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-  
-    <!-- Carousel Inner -->
-    <div class="carousel-inner">
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <img src="public/img/event-private.jpg" class="d-block w-100 rounded" alt="Birthday Party">
-          </div>
-          <div class="col-md-6 text-white">
-            <h3 class="text-warning">Birthday Parties</h3>
-            <h4 class="text-warning">$189</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <ul>
-              <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li>Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <img src="public/img/event-custom.jpg" class="d-block w-100 rounded" alt="Custom Party">
-          </div>
-          <div class="col-md-6 text-white">
-            <h3 class="text-warning">Custom Parties</h3>
-            <h4 class="text-warning">$99</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <ul>
-              <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li>Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Slide 3 -->
-      <div class="carousel-item">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <img src="public/img/events-bg.jpg" class="d-block w-100 rounded" alt="Private Party">
-          </div>
-          <div class="col-md-6 text-white">
-            <h3 class="text-warning">Private Parties</h3>
-            <h4 class="text-warning">$290</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <ul>
-              <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li>Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <!-- Carousel Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#event-carousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#event-carousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </section>
+</section>
+<!-- Section des événements -->
+<section id="events" class="events">
+  <!-- Image de fond en parallaxe -->
+  <div class="events-bg"></div>
 
-<!-- Section: Book a Table -->
-<section id="book-table" style="padding: 3rem 0; background-color: #000; color: #fff;">
-    <div class="container">
-      <div class="text-start mb-4">
-        <p style="color: #ffc107;">RESERVATION-------</p>
-        <h2 style="color: #ffc107;">Book a Table</h2>
-      </div>
-      <form>
-        <div class="row g-3">
-          <div class="col-md-4">
-            <input type="text" class="form-control" placeholder="Your Name" required style="background-color: transparent; color: #fff; border: 1px solid #fff;" />
-          </div>
-          <div class="col-md-4">
-            <input type="email" class="form-control" placeholder="Your Email" required style="background-color: transparent; color: #fff; border: 1px solid #fff;" />
-          </div>
-          <div class="col-md-4">
-            <input type="text" class="form-control" placeholder="Your Phone" required style="background-color: transparent; color: #fff; border: 1px solid #fff;" />
-          </div>
-          <div class="col-md-4">
-            <input type="date" class="form-control" required style="background-color: transparent; color: #fff; border: 1px solid #fff;" />
-          </div>
-          <div class="col-md-4">
-            <input type="time" class="form-control" required style="background-color: transparent; color: #fff; border: 1px solid #fff;" />
-          </div>
-          <div class="col-md-4">
-            <input type="number" class="form-control" placeholder="# of People" required style="background-color: transparent; color: #fff; border: 1px solid #fff;" />
-          </div>
-          <div class="col-12">
-            <textarea class="form-control" rows="5" placeholder="Message" required style="background-color: transparent; color: #fff; border: 1px solid #fff;"></textarea>
-          </div>
-          <div class="col-12 text-center">
-            <button type="submit" class="btn" style="background-color: #ffc107; border: none; color: #000;">Book a Table</button>
-          </div>
-        </div>
-      </form>
+  <div class="container">
+    <!-- Titre de la section -->
+    <div class="section-title">
+      <h2>Events</h2>
+      <p>Organize Your Events in our Restaurant</p>
     </div>
-  </section>
-  
-  <!-- Section: Gallery -->
-  <section id="gallery" style="padding: 3rem 0; background-color: #000; color: #fff;">
-    <div class="container">
-      <div class="text-start mb-4">
-        <p style="color: #ffc107;">GALLERY-------</p>
-        <h2 style="color: #ffc107;">Some Photos from Our Restaurant</h2>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-3">
-          <img src="public/img/gallery-1.jpg" class="img-fluid" alt="Gallery Photo 1" style="border-radius: 8px;">
-        </div>
-        <div class="col-md-3">
-          <img src="public/img/gallery-2.jpg" class="img-fluid" alt="Gallery Photo 2" style="border-radius: 8px;">
-        </div>
-        <div class="col-md-3">
-          <img src="public/img/gallery-3.jpg" class="img-fluid" alt="Gallery Photo 3" style="border-radius: 8px;">
-        </div>
-        <div class="col-md-3">
-          <img src="public/img/gallery-4.jpg" class="img-fluid" alt="Gallery Photo 4" style="border-radius: 8px;">
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Section: Chefs -->
-  <section id="chefs" style="padding: 3rem 0; background-color: #000; color: #fff;">
-    <div class="container">
-      <div class="text-start mb-4">
-        <p style="color: #ffc107;">CHEFS-------</p>
-        <h2 style="color: #ffc107;">Our Professional Chefs</h2>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-4 text-center">
-          <img src="public/img/chefs-1.jpg" class="img-fluid mb-3" alt="Chef 1" style="border-radius: 0;">
-          <h4 style="color: #ffc107;">Chef 1</h4>
-        </div>
-        <div class="col-md-4 text-center">
-          <img src="public/img/chefs-2.jpg" class="img-fluid mb-3" alt="Chef 2" style="border-radius: 0;">
-          <h4 style="color: #ffc107;">Chef 2</h4>
-        </div>
-        <div class="col-md-4 text-center">
-          <img src="public/img/chefs-3.jpg" class="img-fluid mb-3" alt="Chef 3" style="border-radius: 0;">
-          <h4 style="color: #ffc107;">Chef 3</h4>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Section: Contact Us -->
-  <section id="contact-us" style="padding: 3rem 0; background-color: #000; color: #fff;">
-    <div class="container">
-      <div class="text-start mb-4">
-        <p style="color: #ffc107;">CONTACT-------</p>
-        <h2 style="color: #ffc107;">Contact Us</h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.6877163719555!2d4.338787276002477!3d50.85546687167241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c38e84af80dd%3A0xe85cd9cd0218a4aa!2sPl.%20de%20la%20Minoterie%2010%2C%201080%20Molenbeek-Saint-Jean!5e0!3m2!1sen!2sbe!4v1733908676994!5m2!1sen!2sbe"
-            width="100%" height="300" style="border: 0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-        <div class="col-md-6">
-          <form>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Your Name" required style="background-color: transparent; color: #fff; border: 1px solid #fff;" />
+
+    <!-- Carrousel -->
+    <div class="swiper events-slider">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="event-content">
+            <img src="./public/img/event-private.jpg" alt="Private Party" class="event-img">
+            <div class="event-details">
+              <h3 class="event-title">Private Parties</h3>
+              <div class="event-price">$290</div>
+              <p class="event-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <ul class="event-features">
+                <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                <li>Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              </ul>
             </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Your Email" required style="background-color: transparent; color: #fff; border: 1px solid #fff;" />
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="5" placeholder="Message" required style="background-color: transparent; color: #fff; border: 1px solid #fff;"></textarea>
-            </div>
-            <button type="submit" class="btn" style="background-color: #ffc107; border: none; color: #000;">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Footer -->
-  <footer style="padding: 2rem 0; background-color: #000; color: #fff;">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h5 style="color: #ffc107;">CBIENBON</h5>
-          <p>A108 Adam Street, NY 535022, USA</p>
-          <p>Phone: +1 5589 55488 55</p>
-          <p>Email: info@example.com</p>
-          <div class="d-flex gap-2">
-            <a href="#" style="color: #ffc107;">Facebook</a>
-            <a href="#" style="color: #ffc107;">Twitter</a>
-            <a href="#" style="color: #ffc107;">Instagram</a>
           </div>
         </div>
-        <div class="col-md-4">
-          <h5 style="color: #ffc107;">Useful Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="#" style="color: #fff;">Home</a></li>
-            <li><a href="#" style="color: #fff;">About us</a></li>
-            <li><a href="#" style="color: #fff;">Services</a></li>
-            <li><a href="#" style="color: #fff;">Privacy policy</a></li>
-          </ul>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="event-content">
+            <img src="./public/img/event-birthday.jpg" alt="Birthday Party" class="event-img">
+            <div class="event-details">
+              <h3 class="event-title">Birthday Parties</h3>
+              <div class="event-price">$189</div>
+              <p class="event-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <ul class="event-features">
+                <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                <li>Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4">
-          <h5 style="color: #ffc107;">Our Newsletter</h5>
-          <p>Subscribe to stay updated</p>
-          <form>
-            <input type="email" class="form-control mb-2" placeholder="Email Address" required style="background-color: transparent; color: #fff; border: 1px solid #fff;" />
-            <button type="submit" class="btn" style="background-color: #ffc107; border: none; color: #000;">Subscribe</button>
-          </form>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="event-content">
+            <img src="./public/img/event-custom.jpg" alt="Custom Party" class="event-img">
+            <div class="event-details">
+              <h3 class="event-title">Custom Parties</h3>
+              <div class="event-price">$99</div>
+              <p class="event-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <ul class="event-features">
+                <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                <li>Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                <li>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="text-center mt-4">
-        <p>&copy; 2024 CBIENBON. All Rights Reserved.</p>
-      </div>
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
     </div>
-  </footer>
-  
+  </div>
+</section>
+
   <!-- Bootstrap JS -->
   <script>
     // effet d'agrandissement avec du JS pur
@@ -502,5 +372,140 @@
   </script>
   <!-- Bootstrap OUI MAIS JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Ton contenu principal -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".card");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    cards.forEach((card) => {
+      observer.observe(card);
+    });
+  });
+</script>
+<script>document.addEventListener("DOMContentLoaded", function () {
+  const filters = document.querySelectorAll(".menu-filters li");
+  const menuItems = document.querySelectorAll(".menu-item");
+
+  // Fonction pour afficher les éléments d'une catégorie
+  function filterMenu(category) {
+    menuItems.forEach(item => {
+      const itemCategory = item.getAttribute("data-category");
+      if (category === "all" || itemCategory === category) {
+        item.style.display = "flex";
+        setTimeout(() => item.classList.add("fade-in"), 10); // Animation d'apparition
+      } else {
+        item.classList.remove("fade-in");
+        item.style.display = "none";
+      }
+    });
+  }
+
+  // Affiche les éléments "All" par défaut au chargement
+  filterMenu("all");
+
+  // Ajoute un gestionnaire d'événements pour chaque filtre
+  filters.forEach(filter => {
+    filter.addEventListener("click", () => {
+      const selectedFilter = filter.getAttribute("data-filter");
+
+      // Mise à jour des classes actives
+      filters.forEach(f => f.classList.remove("filter-active"));
+      filter.classList.add("filter-active");
+
+      // Filtrage des éléments
+      filterMenu(selectedFilter);
+    });
+  });
+});
+
+</script>
+<script>document.addEventListener("DOMContentLoaded", function () {
+  new Swiper('.events-slider', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    slidesPerView: 1,
+    spaceBetween: 30,
+    speed: 600,
+  });
+});
+</script>
+<script>var swiper = new Swiper('.swiper-container', {
+  loop: true,
+  autoplay: { delay: 5000 },
+  pagination: { el: '.swiper-pagination', clickable: true }
+});
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('.init-swiper', {
+      loop: true,
+      speed: 600,
+      autoplay: {
+        delay: 5000,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  });
+</script>
+<script>document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.carousel-item');
+  const dots = document.querySelectorAll('.dot');
+  let currentSlide = 0;
+  const slideInterval = 5000; // Intervalle automatique en millisecondes
+
+  // Fonction pour changer de slide
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active'); // Désactiver tous les slides
+      dots[i].classList.remove('active'); // Désactiver tous les indicateurs
+    });
+
+    slides[index].classList.add('active'); // Activer le slide actuel
+    dots[index].classList.add('active'); // Activer l'indicateur actuel
+    currentSlide = index; // Mettre à jour l'index courant
+  }
+
+  // Fonction pour passer au slide suivant
+  function nextSlide() {
+    const nextIndex = (currentSlide + 1) % slides.length; // Boucle vers le début
+    showSlide(nextIndex);
+  }
+
+  // Ajouter des écouteurs pour les indicateurs de pagination
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      showSlide(index);
+    });
+  });
+
+  // Activer l'intervalle automatique
+  setInterval(nextSlide, slideInterval);
+
+  // Afficher le premier slide au chargement
+  showSlide(currentSlide);
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="scripts/animations.js"></script>
 </body>
 </html>

@@ -3,71 +3,156 @@
   background-color: rgba(0, 0, 0, 0.7)
   backdrop-filter: blur(5px)
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
-  .nav-link
-    color: #fff
-    margin: 0 0.5rem
-    &:hover, &.active
-      color: #ffc107
-  .btn
-    border: 2px solid #ffc107
-    color: #ffc107
-    &:hover
-      background-color: #ffc107
-      color: #000
+  .navbar-nav
+    text-align: center
 
-/* Header Styles */
+    .nav-link
+      color: #ffffff
+      margin: 0 0.8rem
+      transition: color 0.3s ease
+      &:hover, &.active
+        color: #cda45e
+  
+
+  .book-table-btn
+    border: 2px solid #cda45e
+    border-radius: 25px
+    color: #ffffff
+    background: transparent
+    transition: all 0.3s ease
+    &:hover
+      background-color: #cda45e
+      color: #ffffff
+      border: 1px solid #cda45e
+
+/* Section Header  */
 .header
   position: relative
   height: 100vh
   background: url('../img/hero-bg.jpg') no-repeat center center/cover
-  color: white
+  color: #ffffff
+
+  // Flou subtil sur l'image de fond
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    backdrop-filter: blur(1px)
+    background-color: rgba(0, 0, 0, 0.5)
 
   .container
-    z-index: 2
     position: relative
+    z-index: 1
+    text-align: center // Par défaut centré pour les petits écrans
 
-  h1
-    span
-      color: #ffc107
+    h1
+      font-size: 3rem
       font-weight: bold
+      span
+        color: #cda45e
 
-  .btn-outline-light
-    border: 2px solid #ffc107
-    color: #ffc107
-    &:hover
-      background-color: #ffc107
-      color: #000
+    .hero-btn
+      border: 2px solid #cda45e
+      border-radius: 25px
+      color: #ffffff
+      background: transparent
+      transition: all 0.3s ease
+      &:hover
+        background-color: #cda45e
+        color: #ffffff
+        border: 1px solid #cda45e
 
-  .btn-warning
-    border: 2px solid #ffc107
-    color: #ffffff
-    &:hover
-      background-color: #ffc107
-      color: #000
-.modal-content
-  background-color: transparent
-  border: none
-
-.modal-body
-  padding: 0
-
-.play-button
-  z-index: 3 // Assure que le bouton est au-dessus des autres éléments
-  width: 70px
-  height: 70px
-  border-radius: 50%
-  background: rgba(255, 255, 255, 0.2)
-  backdrop-filter: blur(5px)
-  position: absolute
-  right: 5%
+/* Bouton Play Animé */
+.video-play-button
+  z-index: 10
   top: 50%
-  transform: translateY(-50%)
-  display: flex
-  align-items: center
-  justify-content: center
-  cursor: pointer // Ajoute un curseur pour montrer qu'il est cliquable
-  i
-    font-size: 2.5rem
-    color: #ffc107
-  &:hover
-    background: rgba(255, 255, 255, 0.4)
+  left: 80% // Position initiale pour Desktop
+  transform: translate(-50%, -50%)
+  display: block
+  width: 32px
+  height: 44px
+  border-radius: 50%
+  padding: 18px 20px 18px 28px
+  box-sizing: content-box
+
+  // Cercle externe animé
+  &::before
+    content: ""
+    position: absolute
+    z-index: 0
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    display: block
+    width: 55px
+    height: 55px
+    background: #cda45e
+    border-radius: 50%
+    animation: pulse-border 1100ms ease-out infinite
+
+  // Cercle central
+  &::after
+    content: ""
+    position: absolute
+    z-index: 1
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    display: block
+    width: 60px
+    height: 60px
+    background: #cda45e
+    border-radius: 50%
+    transition: all 200ms
+
+  span
+    display: block
+    position: relative
+    z-index: 3
+    width: 0
+    height: 0
+    border-left: 19px solid #fff
+    border-top: 12px solid transparent
+    border-bottom: 12px solid transparent
+    top: 10px
+    left: 5px
+
+/* Animation */
+@keyframes pulse-border
+  0%
+    transform: translate(-50%, -50%) scale(1)
+    opacity: 1
+  100%
+    transform: translate(-50%, -50%) scale(1.5)
+    opacity: 0
+
+/* Responsive Styles */
+@media (max-width: 1024px) // Tablette
+  .video-play-button
+    left: 70% // Décale légèrement vers la gauche
+    top: 70% // Décale légèrement vers le bas
+  .header
+    .container
+      h1
+        font-size: 2.5rem // Réduit la taille du texte
+      .hero-btn
+        padding: 10px 20px // Réduit la taille des boutons
+
+@media (max-width: 768px) // Mobile L
+  .video-play-button
+    left: 50% // Centre le bouton horizontalement
+    top: 70% // Décale légèrement vers le bas
+
+  .header
+    height: 90vh // Réduit la hauteur pour les petits écrans
+    .container
+      h1
+        font-size: 2rem // Réduit encore la taille du texte
+      p
+        font-size: 1rem // Réduit la taille du sous-titre
+      .hero-btn
+        font-size: 0.9rem // Boutons plus petits
+        padding: 8px 16px
