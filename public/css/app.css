@@ -1,4 +1,10 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "TimesTen";
+  src: url("../assets/fonts/TimesTen.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /* Navbar Styles */
 .navbar {
   background-color: rgba(0, 0, 0, 0.7);
@@ -57,6 +63,10 @@
 }
 .header .container h1 span {
   color: #cda45e;
+}
+.header .container p {
+  font-family: "TimesTen", serif;
+  color: #ffffff;
 }
 .header .container .hero-btn {
   border: 2px solid #cda45e;
@@ -599,7 +609,7 @@
   flex-shrink: 0;
 }
 .events .section-title p {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #cda45e;
   font-family: "TimesTenBold", serif;
 }
@@ -727,7 +737,7 @@
   flex-shrink: 0;
 }
 .book-a-table .section-title p {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #cda45e;
   font-family: "TimesTenBold", serif;
@@ -787,6 +797,93 @@
 }
 .book-a-table .reservation-form .form-button button:hover {
   background-color: #b79240;
+}
+
+.gallery {
+  padding: 80px 0;
+  background-color: #0c0b09;
+  text-align: center;
+}
+.gallery .section-title {
+  text-align: left;
+  margin-bottom: 50px;
+}
+.gallery .section-title h2 {
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.gallery .section-title h2::after {
+  content: "";
+  display: inline-block;
+  width: 120px;
+  height: 1px;
+  background: #cda45e;
+  flex-shrink: 0;
+}
+.gallery .section-title p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  color: #cda45e;
+}
+.gallery .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  .gallery .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 425px) {
+  .gallery .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.gallery .gallery-grid .gallery-item {
+  overflow: hidden;
+  position: relative;
+}
+.gallery .gallery-grid .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.gallery .gallery-grid .gallery-item:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+.gallery .back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: 2px solid #cda45e;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.gallery .back-to-top a {
+  text-decoration: none;
+  color: #cda45e;
+  font-size: 1.5rem;
+}
+.gallery .back-to-top:hover {
+  background-color: #cda45e;
+}
+.gallery .back-to-top:hover a {
+  color: #fff;
 }
 
 /*# sourceMappingURL=app.css.map */
