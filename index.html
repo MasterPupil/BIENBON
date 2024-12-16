@@ -358,6 +358,54 @@
     </div>
   </div>
 </section>
+<!-- Section Book a Table -->
+<section id="book-a-table" class="book-a-table">
+  <div class="container">
+
+    <!-- Section titre -->
+    <div class="section-title">
+      <h2>RESERVATION</h2>
+      <p>Book a Table</p>
+    </div>
+
+    <!-- Formulaire de réservation -->
+    <form class="reservation-form" method="post">
+      <div class="form-grid">
+        <!-- Première ligne -->
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="Your Phone" required>
+        </div>
+
+        <!-- Deuxième l -->
+        <div class="form-group">
+          <input type="date" placeholder="Date" required>
+        </div>
+        <div class="form-group">
+          <input type="time" placeholder="Time" required>
+        </div>
+        <div class="form-group">
+          <input type="number" placeholder="# of people" min="1" required>
+        </div>
+
+        <!-- Troisième -->
+        <div class="form-group message-group">
+          <textarea rows="5" placeholder="Message"></textarea>
+        </div>
+
+        <!-- Bouton Soumettre -->
+        <div class="form-button">
+          <button type="submit">Book a Table</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
 
   <!-- Bootstrap JS -->
   <script>
@@ -469,13 +517,13 @@
   const slides = document.querySelectorAll('.carousel-item');
   const dots = document.querySelectorAll('.dot');
   let currentSlide = 0;
-  const slideInterval = 5000; // Intervalle automatique en millisecondes
+  const slideInterval = 5000; 
 
   // Fonction pour changer de slide
   function showSlide(index) {
     slides.forEach((slide, i) => {
-      slide.classList.remove('active'); // Désactiver tous les slides
-      dots[i].classList.remove('active'); // Désactiver tous les indicateurs
+      slide.classList.remove('active');
+      dots[i].classList.remove('active'); 
     });
 
     slides[index].classList.add('active'); // Activer le slide actuel
