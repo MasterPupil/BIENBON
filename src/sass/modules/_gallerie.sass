@@ -32,14 +32,13 @@
   // Responsive 
   .gallery-grid
     display: grid
-    grid-template-columns: repeat(4, 1fr) // 4 Colonnes sur laptopp
+    grid-template-columns: repeat(4, 1fr) 
     gap: 10px
 
     @media (max-width: 768px)
-      grid-template-columns: repeat(3, 1fr) // 3 Colonnes sur Tablette
-
+      grid-template-columns: repeat(3, 1fr) 
     @media (max-width: 425px)
-      grid-template-columns: 1fr // 1 Colonne sur Mobile
+      grid-template-columns: 1fr 
 
     .gallery-item
       overflow: hidden
@@ -70,6 +69,7 @@
     align-items: center
     cursor: pointer
     transition: all 0.3s ease-in-out
+
 
     a
       text-decoration: none

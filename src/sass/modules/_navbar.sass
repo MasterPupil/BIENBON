@@ -3,32 +3,35 @@
   src: url('../assets/fonts/TimesTen.ttf') format('truetype')
   font-weight: normal
   font-style: normal
-/* Navbar Styles */
 .navbar
   background-color: rgba(0, 0, 0, 0.7)
   backdrop-filter: blur(5px)
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
+
   .navbar-nav
     text-align: center
-
     .nav-link
       color: #ffffff
       margin: 0 0.8rem
       transition: color 0.3s ease
       &:hover, &.active
         color: #cda45e
-  
 
   .book-table-btn
     border: 2px solid #cda45e
     border-radius: 25px
     color: #ffffff
+    padding: 5px 25px
     background: transparent
     transition: all 0.3s ease
     &:hover
       background-color: #cda45e
       color: #ffffff
       border: 1px solid #cda45e
+
+  .navbar-toggler
+    border: none
+    outline: none
 
 /* Section Header  */
 .header
@@ -67,6 +70,7 @@
       border: 2px solid #cda45e
       border-radius: 25px
       color: #ffffff
+      padding: 10px 25px
       background: transparent
       transition: all 0.3s ease
       &:hover
@@ -138,30 +142,30 @@
     transform: translate(-50%, -50%) scale(1.5)
     opacity: 0
 
-/* Responsive Styles */
-@media (max-width: 1024px) // Tablette
+/* Responsive */
+@media (max-width: 1024px) 
   .video-play-button
-    left: 70% // Décale légèrement vers la gauche
-    top: 70% // Décale légèrement vers le bas
+    left: 70% 
+    top: 70%
   .header
     .container
       h1
-        font-size: 2.5rem // Réduit la taille du texte
+        font-size: 2.5rem
       .hero-btn
-        padding: 10px 20px // Réduit la taille des boutons
+        padding: 10px 20px
 
-@media (max-width: 768px) // Mobile L
+@media (max-width: 768px)
   .video-play-button
-    left: 50% // Centre le bouton horizontalement
-    top: 70% // Décale légèrement vers le bas
+    left: 50% 
+    top: 70% 
 
   .header
-    height: 90vh // Réduit la hauteur pour les petits écrans
+    height: 90vh 
     .container
       h1
-        font-size: 2rem // Réduit encore la taille du texte
+        font-size: 2rem 
       p
-        font-size: 1rem // Réduit la taille du sous-titre
+        font-size: 1rem 
       .hero-btn
-        font-size: 0.9rem // Boutons plus petits
+        font-size: 0.9rem 
         padding: 8px 16px

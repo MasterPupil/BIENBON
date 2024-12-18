@@ -1,0 +1,101 @@
+@font-face
+  font-family: 'TimesTen'
+  src: url('../assets/fonts/TimesTenBold.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+.contact
+  background-color: #0b0705
+  color: #fff
+  padding: 60px 0
+  border-bottom: 1px solid #37332a
+
+  // Section titre
+  .section-title
+    text-align: left
+    margin-bottom: 30px
+    h2
+      font-size: 1rem
+      text-transform: uppercase
+      color: #ffffff
+      letter-spacing: 1px
+      display: flex
+      padding-bottom: 5px
+      gap: 0.5rem
+      &::after
+        content: ''
+        display: inline-block
+        width: 120px
+        height: 1px
+        background: #cda45e
+        flex-shrink: 0
+    p
+      font-size: 2.5rem
+      font-family: 'TimesTenBold', serif
+      color: #d6af68
+
+  // Google Map
+  .map iframe
+    width: 100%
+    height: 400px
+    border: none
+    margin-bottom: 40px
+
+  // Contact
+  .contact-content
+    display: flex
+    flex-wrap: wrap
+
+    .info
+      .info-item
+        display: flex
+        align-items: center
+        margin-bottom: 20px
+
+        i
+          color: #ffffff
+          background: #d6af68
+          width: 44px
+          height: 44px
+          display: flex
+          justify-content: center
+          align-items: center
+          font-size: 18px
+          margin-right: 15px
+          border-radius: 50%
+
+        h3
+          margin: 0
+          text-align: left
+          font-size: 1.1rem
+          font-weight: bold
+          
+
+        p
+          margin: 5px 0 0
+          font-size: 0.9rem
+          font-weight: normal
+
+    // Form
+    .contact-form
+      input, textarea
+        width: 100%
+        padding: 10px
+        margin-bottom: 15px
+        background-color: #0b0705
+        border: 1px solid #35302b
+        color: #fff
+        &:focus
+          border-color: #d6af68
+          outline: none
+
+      button
+        background-color: #d6af68
+        color: #ffffff
+        border: none
+        border-radius: 25px
+        padding: 10px 30px
+        font-size: 1rem
+        cursor: pointer
+        transition: 0.3s
+        &:hover
+          background-color: darken(#d6af68, 10%)

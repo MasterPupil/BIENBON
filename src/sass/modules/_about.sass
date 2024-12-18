@@ -2,12 +2,12 @@
 .about-section
   position: relative
   background: url('../img/about-bg.jpg') no-repeat center center/cover
-  background-attachment: fixed // pour l'effet parallaxe pour desktop
+  background-attachment: fixed // effet parallaxe pour desktop
   color: #ffffff
   padding: 5rem 0
-  height: 100vh // Prend toute la hauteur de l'écran sur Laptop pour que ce soit plus bg
+  height: 100vh // prend toute la hauteur 
 
-  // Filtre sombre et léger flou
+  // filtre sombre et flou
   &::before
     content: ''
     position: absolute
@@ -24,12 +24,12 @@
     display: flex
     gap: 2rem
     z-index: 2
-    height: 100% //le contenu occupe la hauteur totale
+    height: 100%
 
     .about-text, .about-image-container
       display: flex
       flex-direction: column
-      justify-content: center // centrer verticalement le contenu
+      justify-content: center
 
     .about-text
       flex: 1
@@ -80,36 +80,44 @@
 
       .about-image
         position: relative
+
         img
           width: 100%
           height: auto
-          border-radius: 8px
+          border-radius: 0px
           transition: transform 0.3s ease
-          &:hover
-            transform: scale(1.05)
+
+        &:hover img
+          transform: scale(1.05)
+
+          ~ .corner
+            transform: translate(15px, 15px)
+            &:nth-child(2)
+              transform: translate(-15px, -15px)
 
         .corner
           position: absolute
-          width: 30px
-          height: 30px
-          border: 2px solid #cda45e
+          width: 50px
+          height: 50px
+          border: 5px solid #cda45e
+          transition: transform 0.3s ease // animation des coins
 
           &.top-left
-            top: 0
-            left: 0
+            top: 20px
+            left: 20px
             border-right: none
             border-bottom: none
 
           &.bottom-right
-            bottom: 0
-            right: 0
+            bottom: 20px
+            right: 20px
             border-left: none
             border-top: none
 
 /* Responsive */
 @media (max-width: 1024px) // Tablette
   .about-section
-    height: auto // Annule la hauteur 100vh prq ici ça marche moi pas oublier pour suite
+    height: auto // annule la hauteur 100vh
     background-attachment: scroll
 
     .about-container
@@ -118,9 +126,9 @@
       height: auto
 
       .about-image-container
-        order: -1 // Image passe au-dessus du texte
+        order: -1 // image passe au-dessus du texte
 
-@media (max-width: 768px) // Mobile L
+@media (max-width: 768px) // mobile 
   .about-section
     padding: 3rem 1rem
     height: auto
